@@ -94,7 +94,7 @@ describe("POST /api/items", () => {
     readData.mockResolvedValue([]);
     writeData.mockResolvedValue();
 
-    const newItem = { name: "New Item", category: "Test" };
+    const newItem = { id: 9, name: 'New Item', category: 'Electronics', price: 499 };
 
     const res = await request(app).post("/api/items").send(newItem);
 
